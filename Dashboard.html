@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #draggable {
+            width: 150px;
+            height: 100px;
+            background: #F7C19B;
+            border-radius: 50%/80%;
+            position: absolute;
+            cursor: move;
+        }
+
+        .toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .toolbar button {
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#draggable" ).draggable();
+
+        $("#reset").click(function() {
+            // add your reset functionality here
+            console.log("Reset clicked");
+        });
+
+        $("#refresh").click(function() {
+            // add your refresh functionality here
+            console.log("Refresh clicked");
+        });
+
+        $("#split").click(function() {
+            // add your split functionality here
+            console.log("Split clicked");
+        });
+    } );
+    </script>
+</head>
+<body>
+    <div id="draggable"></div>
+    <div class="toolbar">
+        <button id="split"><img src="split.png"> 分割</button>
+        <button id="refresh"><img src="refresh.png"> 刷新</button>
+        <button id="reset"><img src="reset.png"> 重置</button>
+    </div>
+</body>
+</html>
